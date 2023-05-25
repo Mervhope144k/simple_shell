@@ -7,27 +7,28 @@
 #include <string.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <stdbool.h>
 #include <sys/stat.h>
 #include <limits.h>
 #include <fcntl.h>
 #include <errno.h>
 
-/* for read/write buffers */
+
 #define READ_BUF_SIZE 1024
 #define WRITE_BUF_SIZE 1024
 #define BUF_FLUSH -1
 
-/* for command chaining */
+
 #define CMD_NORM	0
 #define CMD_OR		1
 #define CMD_AND		2
 #define CMD_CHAIN	3
 
-/* for convert_number() */
+
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
 
-/* 1 if using system getline() */
+
 #define USE_GETLINE 0
 #define USE_STRTOK 0
 
@@ -118,9 +119,11 @@ void fork_cmd(info_t *);
 int is_cmd(info_t *, char *);
 char *dup_chars(char *, int, int);
 char *find_path(info_t *, char *, char *);
+char *_strtok(char *str, char *delim);
 int loophsh(char **);
 void _eputs(char *);
 int _eputchar(char);
+char *_strstr(char *haystack, const char *needle);
 int _putfd(char c, int fd);
 int _putsfd(char *str, int fd);
 char *_memcpy(char *dest, char *src, unsigned int n);

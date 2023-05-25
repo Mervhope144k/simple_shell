@@ -26,7 +26,7 @@ int _setenv(info_t *info, char *var, char *value)
 
 	while (node)
 	{
-		p = starts_with(node->str, var);
+		p = _strstr(node->str, var);
 		if (p && *p == '=')
 		{
 			free(node->str);

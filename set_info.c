@@ -16,7 +16,7 @@ void set_info(info_t *info, char **av)
 		if (!info->argv)
 		{
 
-			info->argv = malloc(sizeof(char *) * 2);
+			info->argv = malloc(2 * sizeof(char *));
 			if (info->argv)
 			{
 				info->argv[0] = _strdup(info->arg);

@@ -19,10 +19,10 @@ To compile the shell, run the following command: gcc -Wall -Werror -Wextra -peda
 
 
 
-To run the shell in interactive mode, use: ./simple_shell
+To run the shell in interactive mode, use: ./hsh
 
 
-To run the shell in batch mode with a file, use: ./simple_shell [filename]
+To run the shell in batch mode with a file, use: ./hsh [filename]
 
 
 
@@ -43,7 +43,7 @@ For more information on the supported commands and usage, refer to the documenta
 
 ## Documentation
 
-The documentation for the Simple Shell project can be found in the [docs](./docs) directory. It includes detailed explanations of the shell's features, supported commands, and usage examples.
+The documentation for the Simple Shell project are available in the ressources provided by ALX holberton school. It includes detailed explanations of the shell's features, supported commands, and usage examples.
 
 ## Contributing
 

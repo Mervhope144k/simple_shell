@@ -14,9 +14,12 @@ char **strtow2(char *str, char d)
 	if (str == NULL || str[0] == 0)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
+	{
 		if ((str[i] != d && str[i + 1] == d) ||
 		    (str[i] != d && !str[i + 1]) || str[i + 1] == d)
 			numwords++;
+	}
+
 	if (numwords == 0)
 		return (NULL);
 	s = malloc((1 + numwords) * sizeof(char *));
@@ -39,7 +42,7 @@ char **strtow2(char *str, char d)
 		}
 		for (m = 0; m < k; m++)
 			s[j][m] = str[i++];
-		s[j][m] = 0;
+		s[j][m] = '\0';
 	}
 	s[j] = NULL;
 	return (s);
