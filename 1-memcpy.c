@@ -4,7 +4,7 @@
  * _memcpy - customised function that work like the builtin memcpy
  * @n:argument three, function copies
  * @src:argument two, bytes from memory area
- * @dest: argument one, memory area
+ * @dest: argument one, memory area or heap
  * Return: a pointer to @dest
  */
 
